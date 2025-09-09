@@ -1,0 +1,172 @@
+name: JASP Bug Form
+description: Report a bug that you found in JASP.
+title: "[BUG]: "
+labels: ["bug", "triage"]
+assignees:
+  - kylelang
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+
+        This form will help you structure the informaion we need to reproduce and fix your bug. Please provide as much
+        of the requested information as possible: the more we know about your problem, the faster we can fix it.
+
+        ---
+
+  - type: markdown
+    attributes:
+      value: "## System Environment"
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What operating system were you using to run JASP when you experienced the bug?
+      options:
+        - Linux
+        - Mac OS
+        - Windows
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: JASP Version
+      description: What version of JASP were you using when you experienced the bug?
+      placeholder: E.g., 0.95.1
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit ID
+      description: |
+        If you experienced the bug while running a development version of JASP (e.g., a Windows nightly release, a
+        version of JASP built from source), provide the commit ID for your build of JASP.
+      placeholder: E.g., 180d14c18d13c107ee7c16b0993ff7e1cc02680b
+
+  - type: input
+    id: module
+    attributes:
+      label: Analysis Module
+      description: In which analysis module did you experienced the bug?
+      placeholder: E.g., regression
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+       "---
+
+        ## Bug Description"
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: Describe the bug you've experienced.
+      placeholder: Explain the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Explain what *should have happened* if the analysis had run as expected.
+      placeholder: Explain the intended result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps needed to reproduce the bug.
+      placeholder: |
+        1. Open the *Big Five Personality Traits* dataset from the JASP Data Library.
+        2. Start a Classical Linear Regression analysis.
+           - DV = Neuroticism
+           - Covariates = {Agreeableness, Openness}
+        3. Tick the box for "Residuals vs. dependent" in the Plots section. 
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: ---
+
+  - type: markdown
+    attributes:
+      value: "## Additional Information"
+
+  # - type: dropdown
+  #   id: job
+  #   attributes:
+  #     label: Job Title
+  #     description: Which option best describes your primary job at UU?
+  #     options:
+  #       - Assistant/Associate/Full Professor
+  #       - Lecture
+  #       - Researcher
+  #       - Postdoc
+  #       - PhD Student
+  #       - Master Student
+  #       - Bachelor Student
+  #       - Support Staff
+  #       - Subcontractor/Consultant
+  #       - No Affiliation
+  #   validations:
+  #     required: true
+
+  - type: dropdown
+    id: teaching-affect
+    attributes:
+      label: Impact on Teaching
+      description: How has this bug affected your teaching?
+      options:
+        - No effect on my teaching
+        - Impacts my teaching, but I can work around the bug with other JASP functionality
+        - Impacts my teaching, but I can work around the bug with other open-source software like R
+        - Impacts my teaching, and I must use proprietary software like SPSS to work around the bug
+        - Completely precludes my ability to teach certain topics
+
+  - type: dropdown
+    id: research-affect
+    attributes:
+      label: Impact on Research
+      description: How has this bug affected your research?
+      options:
+        - No effect on my research
+        - Impacts my research, but I can work around the bug with other JASP functionality
+        - Impacts my research, but I can work around the bug with other open-source software like R
+        - Impacts my research, and I must use proprietary software like SPSS to work around the bug
+        - Makes some part of my research completely impossible
+
+  - type: input
+    id: affiliation
+    attributes:
+      label: UU Affiliation
+      description: In which UU unit (i.e., department, institute, study program) do you work/study?
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Email
+      description: Please provide an email address that we can use to contact you, if we need more information.
+      placeholder: E.g., email@example.com
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Final Check
+      options:
+        - label: I have not checked this box.
