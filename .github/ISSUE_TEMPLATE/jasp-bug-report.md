@@ -1,5 +1,5 @@
 ---
-name: JASP Bug Report
+name: Old JASP Bug Report
 about: Report a bug you found in JASP
 title: "[BUG]: "
 labels: bug
