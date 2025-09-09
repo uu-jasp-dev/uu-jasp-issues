@@ -1,4 +1,4 @@
-name: JASP Bug Report
+name: JASP Bug Form
 description: Report a bug that you found in JASP.
 title: "[BUG]: "
 labels: ["bug", "triage"]
