@@ -13,6 +13,8 @@ body:
         This form will help you structure the informaion we need to reproduce and fix your bug. Please provide as much
         of the requested information as possible: the more we know about your problem, the faster we can fix it.
 
+        ---
+
   - type: markdown
     attributes:
       value: "## System Environment"
@@ -58,7 +60,10 @@ body:
 
   - type: markdown
     attributes:
-      value: "## Bug Description"
+      value: |
+       "---
+
+        ## Bug Description"
 
   - type: textarea
     id: current-behavior
@@ -91,29 +96,33 @@ body:
         3. Tick the box for "Residuals vs. dependent" in the Plots section. 
     validations:
       required: true
+      
+  - type: markdown
+    attributes:
+      value: ---
 
   - type: markdown
     attributes:
       value: "## Additional Information"
 
-  - type: dropdown
-    id: job
-    attributes:
-      label: Job Title
-      description: Which option best describes your primary job at UU?
-      options:
-        - Assistant/Associate/Full Professor
-        - Lecture
-        - Researcher
-        - Postdoc
-        - PhD Student
-        - Master Student
-        - Bachelor Student
-        - Support Staff
-        - Subcontractor/Consultant
-        - No Affiliation
-    validations:
-      required: true
+  # - type: dropdown
+  #   id: job
+  #   attributes:
+  #     label: Job Title
+  #     description: Which option best describes your primary job at UU?
+  #     options:
+  #       - Assistant/Associate/Full Professor
+  #       - Lecture
+  #       - Researcher
+  #       - Postdoc
+  #       - PhD Student
+  #       - Master Student
+  #       - Bachelor Student
+  #       - Support Staff
+  #       - Subcontractor/Consultant
+  #       - No Affiliation
+  #   validations:
+  #     required: true
 
   - type: dropdown
     id: teaching-affect
@@ -144,26 +153,17 @@ body:
     attributes:
       label: UU Affiliation
       description: In which UU unit (i.e., department, institute, study program) do you work/study?
-      placeholder: E.g., Methodology & Statistics
     validations:
       required: true
 
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get contact you, if we need more information?
+      label: Contact Email
+      description: Please provide an email address that we can use to contact you, if we need more information.
       placeholder: E.g., email@example.com
     validations:
       required: false
-
-  - type: checkboxes
-    attributes:
-      label: Could this bug actually be a feature?
-      description: Maybe you just have the wrong perspective?
-      options:
-        - label: I am viewing the situation with appropriate optimisim.
-        - label: This bug is not a feature.
 
   - type: checkboxes
     attributes:
