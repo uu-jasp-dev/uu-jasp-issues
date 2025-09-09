@@ -43,11 +43,10 @@ body:
     attributes:
       label: Commit ID
       description: |
-        Provide the commit ID for your JASP build if you experienced the bug while running
-
-        - A development version of JASP
-        - A Windows nightly release
-        - JASP built from source
+        Provide the commit ID for your JASP build if you experienced the bug while running any of the following JASP flavors.
+           - A development version of JASP
+           - A Windows nightly release
+           - JASP built from source
       placeholder: E.g., 180d14c18d13c107ee7c16b0993ff7e1cc02680b
 
   - type: input
@@ -123,10 +122,10 @@ body:
       description: How has this bug affected your teaching?
       options:
         - "No impact on my teaching"
-        - "Minor Impact: I can work around the bug with other JASP functionality"
-        - "Moderate Impact: I can work around the bug with other open-source software"
-        - "Major Impact: I must use proprietary software to work around the bug"
-        - "Debilitating Impact: I cannot teach certain topics"
+        - "Minor: I can work around the bug with other JASP functionality"
+        - "Moderate: I can work around the bug with other open-source software"
+        - "Major: I must use proprietary software to work around the bug"
+        - "Debilitating: I cannot teach certain topics"
         - "N/A: I do not teach"
       default: 0
 
@@ -137,10 +136,10 @@ body:
       description: How has this bug affected your research?
       options:
         - "No impact on my research"
-        - "Minor Impact: I can work around the bug with other JASP functionality"
-        - "Moderate Impact: I can work around the bug with other open-source software"
-        - "Major Impact: I must use proprietary software to work around the bug"
-        - "Debilitating Impact: I cannot complete parts of my research"
+        - "Minor: I can work around the bug with other JASP functionality"
+        - "Moderate: I can work around the bug with other open-source software"
+        - "Major: I must use proprietary software to work around the bug"
+        - "Debilitating: I cannot complete parts of my research"
         - "N/A: I do not conduct research"
       default: 0
 
