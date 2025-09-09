@@ -13,8 +13,6 @@ body:
         This form will help you structure the informaion we need to reproduce and fix your bug. Please provide as much
         of the requested information as possible: the more we know about your problem, the faster we can fix it.
 
-        ---
-
   - type: markdown
     attributes:
       value: "## System Environment"
@@ -60,17 +58,13 @@ body:
 
   - type: markdown
     attributes:
-      value: |
-       "---
-
-        ## Bug Description"
+      value: "## Bug Description"
 
   - type: textarea
     id: current-behavior
     attributes:
       label: Current Behavior
-      description: Describe the bug you've experienced.
-      placeholder: Explain the bug.
+      description: Describe what happened when you triggered the bug.
     validations:
       required: true
 
@@ -78,8 +72,7 @@ body:
     id: expected-behavior
     attributes:
       label: Expected Behavior
-      description: Explain what *should have happened* if the analysis had run as expected.
-      placeholder: Explain the intended result.
+      description: Explain what *should have happened* if the analysis had run correctly.
     validations:
       required: true
 
@@ -88,18 +81,8 @@ body:
     attributes:
       label: Steps to Reproduce
       description: List the steps needed to reproduce the bug.
-      placeholder: |
-        1. Open the *Big Five Personality Traits* dataset from the JASP Data Library.
-        2. Start a Classical Linear Regression analysis.
-           - DV = Neuroticism
-           - Covariates = {Agreeableness, Openness}
-        3. Tick the box for "Residuals vs. dependent" in the Plots section. 
     validations:
       required: true
-      
-  - type: markdown
-    attributes:
-      value: ---
 
   - type: markdown
     attributes:
@@ -130,11 +113,13 @@ body:
       label: Impact on Teaching
       description: How has this bug affected your teaching?
       options:
-        - No effect on my teaching
-        - Impacts my teaching, but I can work around the bug with other JASP functionality
-        - Impacts my teaching, but I can work around the bug with other open-source software like R
-        - Impacts my teaching, and I must use proprietary software like SPSS to work around the bug
-        - Completely precludes my ability to teach certain topics
+        - "No impact on my teaching"
+        - "Minor Impact: I can work around the bug with other JASP functionality"
+        - "Moderate Impact: I can work around the bug with other open-source software"
+        - "Major Impact: I must use proprietary software to work around the bug"
+        - "Debilitating Impact: I cannot teach certain topics"
+        - "N/A: I do not teach"
+      default: 0
 
   - type: dropdown
     id: research-affect
@@ -142,11 +127,13 @@ body:
       label: Impact on Research
       description: How has this bug affected your research?
       options:
-        - No effect on my research
-        - Impacts my research, but I can work around the bug with other JASP functionality
-        - Impacts my research, but I can work around the bug with other open-source software like R
-        - Impacts my research, and I must use proprietary software like SPSS to work around the bug
-        - Makes some part of my research completely impossible
+        - "No impact on my research"
+        - "Minor Impact: I can work around the bug with other JASP functionality"
+        - "Moderate Impact: I can work around the bug with other open-source software"
+        - "Major Impact: I must use proprietary software to work around the bug"
+        - "Debilitating Impact: I cannot complete parts of my research"
+        - "N/A: I do not conduct research"
+      default: 0
 
   - type: input
     id: affiliation
